@@ -12,8 +12,6 @@ export const GlobalStyle = createGlobalStyle`
 
 html {
   font-size: 62.5%;
-  /* scroll-behavior: smooth; */
-  /* 1rem = 10px */
   overflow-x: hidden;
 }
 
@@ -81,11 +79,8 @@ li {
   list-style: none;
 }
 
-
-${"" /* resuable code section  */}
-
 .container {
-  max-width: 120rem;
+  max-width: 130rem;
   margin: 0 auto;
 }
 
@@ -121,6 +116,7 @@ ${"" /* resuable code section  */}
       margin-bottom: 0;
       text-transform: uppercase;
       color: #5138ee;
+      font-size: 16px;
     }
 
    .caption {
