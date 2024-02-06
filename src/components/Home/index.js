@@ -1,7 +1,7 @@
-import FeatureProduct from "../FeatureProduct";
+import FeatureProduct from "./FeatureProduct";
 import HeroSection from "../HeroSection";
-import Services from "../Services";
-import Trusted from "../Trusted";
+import Services from "./Services";
+import Trusted from "./Trusted";
 
 const data = {
     name: "Krishna Kart",

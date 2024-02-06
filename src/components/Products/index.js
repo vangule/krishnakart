@@ -1,6 +1,6 @@
-import FilterSection from "../FilterSection";
-import ProductList from "../ProductList";
-import Sort from "../Sort";
+import FilterSection from "./FilterSection";
+import ProductList from "./ProductList";
+import Sort from "./Sort";
 import { Wrapper } from "./styles";
 
 const Products = () => {

@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useProductContext } from "../../context/productcontex";
-import PageNavigation from "../PageNavigation";
-import MyImage from "../MyImage";
+import { useProductContext } from "../../context/productContex";
+import PageNavigation from "./PageNavigation";
+import ProductImg from "./ProductImg";
 import FormatPrice from "../../Helpers/FormatPrice";
 import { MdSecurity } from "react-icons/md";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
-import Star from "../Star";
-import AddToCart from "../AddToCart";
+import Ratings from "./Ratings";
+import AddToCart from "./AddToCart";
 import { Wrapper, Container } from "./styles";
 
 const API = "https://api.pujakaitem.com/api/products";
@@ -41,17 +41,16 @@ const SingleProduct = () => {
   return (
     <Wrapper>
       <PageNavigation title={name} />
+
       <Container className="container">
         <div className="grid grid-two-column">
-          {/* product Images  */}
           <div className="product_images">
-            <MyImage imgs={image} />
+            <ProductImg imgs={image} />
           </div>
 
-          {/* product dAta  */}
           <div className="product-data">
             <h2>{name}</h2>
-            <Star stars={stars} reviews={reviews} />
+            <Ratings stars={stars} reviews={reviews} />
 
             <p className="product-data-price">
               MRP:
@@ -76,7 +75,7 @@ const SingleProduct = () => {
 
               <div className="product-warranty-data">
                 <TbTruckDelivery className="warranty-icon" />
-                <p>Thapa Delivered </p>
+                <p>KrishnaKart Delivered </p>
               </div>
 
               <div className="product-warranty-data">

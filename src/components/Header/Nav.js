@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { CgMenu, CgClose } from "react-icons/cg";
-import { useCartContext } from "../../context/cart_context";
+import { useCartContext } from "../../context/cartContext";
 import { NavContainer } from './styles';
 
 const Nav = () => {
   const [menuIcon, setMenuIcon] = useState();
-  const { total_item = 0 } = useCartContext();
-
+  const { total_item : totalItem = 0 } = useCartContext();
 
   return (
     <NavContainer>
@@ -49,7 +48,7 @@ const Nav = () => {
           <li>
             <NavLink to="/cart" className="navbar-link cart-trolley--link">
               <FiShoppingCart className="cart-trolley" />
-              <span className="cart-total--item"> {total_item} </span>
+              <span className="cart-total--item">{totalItem ? totalItem : 0} </span>
             </NavLink>
           </li>
         </ul>

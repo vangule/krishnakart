@@ -1,5 +1,5 @@
-import { useCartContext } from "../../context/cart_context";
-import CartItem from "../CartItem";
+import { useCartContext } from "../../context/cartContext";
+import CartItem from "./CartItem";
 import { NavLink } from "react-router-dom";
 import FormatPrice from "../../Helpers/FormatPrice";
 import { EmptyDiv, Wrapper, Button } from "./styles";
@@ -10,7 +10,7 @@ const Cart = () => {
   if (cart?.length === 0) {
     return (
       <EmptyDiv>
-        <h3>No Cart in Item </h3>
+        <h3>No Item in Cart</h3>
       </EmptyDiv>
     );
   }
@@ -41,7 +41,6 @@ const Cart = () => {
           </Button>
         </div>
 
-        {/* order total_amount */}
         <div className="order-total--amount">
           <div className="order-total--subdata">
             <div>

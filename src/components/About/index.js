@@ -1,5 +1,5 @@
 import HeroSection from "../../components/HeroSection";
-import { useProductContext } from "../../context/productcontex";
+import { useProductContext } from "../../context/productContex";
 
 const data = {
     name: "Thapa Ecommerce",
