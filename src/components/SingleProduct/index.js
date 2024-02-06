@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useProductContext } from "../../context/productContex";
 import PageNavigation from "./PageNavigation";
 import ProductImg from "./ProductImg";
 import FormatPrice from "../../Helpers/FormatPrice";
@@ -8,6 +7,7 @@ import { MdSecurity } from "react-icons/md";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
 import Ratings from "./Ratings";
 import AddToCart from "./AddToCart";
+import { useProductContext } from "../../context/productContex";
 import { Wrapper, Container } from "./styles";
 
 const API = "https://api.pujakaitem.com/api/products";
