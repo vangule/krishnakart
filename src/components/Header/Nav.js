@@ -4,53 +4,45 @@ import { FiShoppingCart } from "react-icons/fi";
 import { CgMenu, CgClose } from "react-icons/cg";
 import { useCartContext } from "../../context/cart_context";
 import { NavContainer } from './styles';
+import { NAVIGATION_MAPPING } from "../../constants";
 
 const Nav = () => {
-  const [menuIcon, setMenuIcon] = useState();
+  const [menuIcon, setMenuIcon] = useState(false);
+  const [activeTab, setActiveTab] = useState('/');
+
   const { total_item : totalItem = 0 } = useCartContext();
+
+  const handleNavigation = (tab) => {
+    setMenuIcon(false);
+    setActiveTab(tab)
+  };
 
   return (
     <NavContainer>
       <div className={menuIcon ? "navbar active" : "navbar"}>
         <ul className="navbar-lists">
-          <li>
-            <NavLink
-              to="/"
-              className="navbar-link"
-              onClick={() => setMenuIcon(false)}>
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/about"
-              className="navbar-link"
-              onClick={() => setMenuIcon(false)}>
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/products"
-              className="navbar-link"
-              onClick={() => setMenuIcon(false)}>
-              Products
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/contact"
-              className="navbar-link"
-              onClick={() => setMenuIcon(false)}>
-              Contact
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/cart" className="navbar-link cart-trolley--link">
+          {(NAVIGATION_MAPPING || []).map((item) => {
+            const { to = '', key = '', name = '' } = item || {};
+
+            const renderNav = key ==='cart' ? 
+            <>
               <FiShoppingCart className="cart-trolley" />
               <span className="cart-total--item">{totalItem ? totalItem : 0} </span>
-            </NavLink>
-          </li>
+            </> :  name;
+
+            return(
+              <li key={key}>
+                  <NavLink
+                    to={to}
+                    className={`navbar-link ${key ==='cart' ? 'cart-trolley--link' : ''}`}
+                    onClick={() => handleNavigation(to)}
+                    style={{ color: activeTab === to ? 'rgb(98 84 243)' : '#000' }}
+                  >
+                    {renderNav}
+                  </NavLink>
+              </li>
+            )
+          })}
         </ul>
 
         <div className="mobile-navbar-btn">

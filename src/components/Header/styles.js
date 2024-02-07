@@ -13,6 +13,13 @@ export const MainHeader = styled.header`
   .logo {
     height: 5rem;
   }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    img {
+      height: 70px;
+      width: 180px;
+    }
+  }
 `;
 
 export const NavContainer = styled.nav`
@@ -130,7 +137,6 @@ export const NavContainer = styled.nav`
     visibility: hidden;
     opacity: 0;
     transform: translateX(100%);
-    /* transform-origin: top; */
     transition: all 3s linear;
   }
 

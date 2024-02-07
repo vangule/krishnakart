@@ -17,7 +17,7 @@ const Footer = () => {
 
         <div>
           <Button className="btn hireme-btn">
-            <NavLink to="/"> Get Started </NavLink>
+            <NavLink to="/">Get Started</NavLink>
           </Button>
         </div>
         </div>
@@ -53,12 +53,10 @@ const Footer = () => {
                 </a>
               )})}
             </div>
-         
-
         </div>
         <div className="footer-contact">
           <h3>Call Us</h3>
-          <h3>+91 12345678978</h3>
+          <h3>+91 9284315806</h3>
         </div>
       </div>
 
