@@ -2,7 +2,7 @@ import { useCartContext } from "../../context/cartContext";
 import CartItem from "./CartItem";
 import { NavLink } from "react-router-dom";
 import FormatPrice from "../../Helpers/FormatPrice";
-import { EmptyDiv, Wrapper, Button } from "./styles";
+import { EmptyDiv, Wrapper, Button, ContinueBtn, Label } from "./styles";
 
 const Cart = () => {
   const { cart, clearCart, total_price, shipping_fee } = useCartContext();
@@ -10,7 +10,10 @@ const Cart = () => {
   if (cart?.length === 0) {
     return (
       <EmptyDiv>
-        <h3>No Item in Cart</h3>
+        <Label>No Item in Cart</Label>
+        <NavLink to="/products">
+          <ContinueBtn>continue Shopping</ContinueBtn>
+        </NavLink>
       </EmptyDiv>
     );
   }

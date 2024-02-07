@@ -4,13 +4,14 @@ import styled from "styled-components";
 export const EmptyDiv = styled.div`
   display: grid;
   place-items: center;
-  height: 50vh;
+  padding: 12rem 0;
+`;
 
-  h3 {
-    font-size: 4.2rem;
-    text-transform: capitalize;
-    font-weight: 300;
-  }
+export const Label = styled.div`
+  font-size: 4rem;
+  text-transform: capitalize;
+  font-weight: 300;
+  margin-bottom: 4rem;
 `;
 
 export const Wrapper = styled.section`
@@ -214,5 +215,27 @@ export const Button = styled.button`
     text-decoration: none;
     color: rgb(255 255 255);
     font-size: 1.8rem;
+  }
+`;
+
+export const ContinueBtn = styled.button`
+  text-decoration: none;
+  max-width: auto;
+  background-color: #fff;
+  color: rgb(98 84 243);
+  padding: 1.4rem 2.4rem;
+  border: 1px solid rgb(98 84 243);
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:active {
+    box-shadow: ${({ theme }) => theme.colors.shadowSupport};
+    transform: scale(0.96);
+    background: rgb(98 84 243);
+    color: #fff;
+    border: none;
   }
 `;

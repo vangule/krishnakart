@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { GlobalStyle } from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
@@ -9,7 +9,7 @@ import Home from "./components/Home";
 import Contact from './components/Contact';
 import Products from './components/Products';
 import Cart from "./components/Cart";
-import ErrorPage from "./components/ErrorPage";
+import PageNotFound from "./components/PageNotFound";
 import SingleProduct from "./components/SingleProduct";
 
 const theme = {
@@ -38,6 +38,8 @@ const theme = {
 };
 
 const App = () => {
+  const [pageNotFound, setPageNotFound] = useState(false);
+
   return (
     <ThemeProvider theme={theme}>
       <Router>
@@ -50,9 +52,9 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/singleproduct/:id" element={<SingleProduct />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="*" element={<ErrorPage />} />
+          <Route path="*" element={<PageNotFound pageNotFound={pageNotFound} setPageNotFound={setPageNotFound} />} />
         </Routes>
-        <Footer />
+        {!pageNotFound && <Footer pageNotFound={pageNotFound} />}
       </Router>
     </ThemeProvider>
   );

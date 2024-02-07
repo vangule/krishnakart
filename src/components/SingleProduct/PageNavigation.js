@@ -1,27 +1,29 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { FiArrowLeft } from "react-icons/fi";
 
-const PageNavigation = ({ title = '' }) => {
+const PageNavigation = () => {
   return (
-    <Wrapper>
-      <NavLink to="/">Home</NavLink>/{title}
-    </Wrapper>
+    <Container>
+      <NavLink to="/">
+        <FiArrowLeft fontSize={40} style={{ color : '#000'}} />
+      </NavLink>
+      <Back>Back</Back>
+    </Container>
   );
 };
 
-const Wrapper = styled.section`
-  height: 10rem;
+const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.bg};
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  font-size: 2.5rem;
-  padding-left: 1.2rem;
+  padding: 1rem 4rem;
+`;
 
-  a {
-    font-size: 2.5rem;
-  }
+const Back = styled.div`
+  font-size: 2.4rem;
+  margin-left: 1.4rem;
 `;
 
 export default PageNavigation;

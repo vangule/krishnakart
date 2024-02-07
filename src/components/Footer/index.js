@@ -1,13 +1,13 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
-import { Wrapper, Button, Email, SubmitBtn } from './styles';
+import { Container, Button, Email, SubmitBtn } from './styles';
 import { SOCIALS } from '../../constants';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
-    <Wrapper>
+    <Container>
       <section className="contact-short">
         <div className="grid grid-two-column">
         <div>
@@ -75,7 +75,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  </Wrapper>
+  </Container>
   );
 };
 

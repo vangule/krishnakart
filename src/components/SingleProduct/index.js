@@ -9,6 +9,7 @@ import Ratings from "./Ratings";
 import AddToCart from "./AddToCart";
 import { useProductContext } from "../../context/productContex";
 import { Wrapper, Container } from "./styles";
+import Loader from "./Loader";
 
 const API = "https://api.pujakaitem.com/api/products";
 
@@ -35,12 +36,12 @@ const SingleProduct = () => {
   }, []);
 
   if (isSingleLoading) {
-    return <div className="page_loading">Loading.....</div>;
+    return <Loader />;
   }
 
   return (
     <Wrapper>
-      <PageNavigation title={name} />
+      <PageNavigation />
 
       <Container className="container">
         <div className="grid grid-two-column">

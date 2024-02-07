@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.section`
+export const Container = styled.section`
   .container {
-    padding: 9rem 0;
+    padding: 18rem 0;
     text-align: center;
 
     h2 {
@@ -18,7 +18,6 @@ export const Wrapper = styled.section`
     }
   }
 `;
-
 
 export const Button = styled.button`
   text-decoration: none;

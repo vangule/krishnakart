@@ -7,6 +7,8 @@ const Sort = () => {
   const { filter_products, grid_view, setGridView, setListView, sorting } =
     useFilterContext();
 
+  const productCount = filter_products?.length;
+
   return (
     <Container className="sort-section">
       <div className="sorting-list--grid">
@@ -24,7 +26,7 @@ const Sort = () => {
       </div>
 
       <div className="product-data">
-        <p>{`${filter_products?.length} Product Available`}</p>
+        {productCount > 0 && <p>{`${productCount} Product Available`}</p>}
       </div>
 
       <div className="sort-selection">
