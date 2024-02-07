@@ -3,7 +3,7 @@ import { FaCheck } from "react-icons/fa";
 import CartAmountToggle from "../../Cart/CartAmountToggle";
 import { NavLink } from "react-router-dom";
 import { Button } from "../../../styles/Button";
-import { useCartContext } from "../../../context/cartContext";
+import { useCartContext } from "../../../context/cart_context";
 import { Container } from './styles';
 
 const AddToCart = ({ product = {} }) => {

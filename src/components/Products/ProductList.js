@@ -1,5 +1,5 @@
 import React from "react";
-import { useFilterContext } from "../../context/filterContext";
+import { useFilterContext } from "../../context/filter_context";
 import GridView from "./GridView";
 import ListView from "./ListView";
 import { ShoppingCart, SubText, EmptyState } from './styles';

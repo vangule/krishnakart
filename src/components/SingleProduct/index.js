@@ -7,7 +7,7 @@ import { MdSecurity } from "react-icons/md";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
 import Ratings from "./Ratings";
 import AddToCart from "./AddToCart";
-import { useProductContext } from "../../context/productContex";
+import { useProductContext } from "../../context/product_contex.js";
 import { Wrapper, Container } from "./styles";
 import Loader from "./Loader";
 

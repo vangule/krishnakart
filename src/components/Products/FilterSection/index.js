@@ -1,4 +1,4 @@
-import { useFilterContext } from "../../../context/filterContext";
+import { useFilterContext } from "../../../context/filter_context";
 import { FaCheck } from "react-icons/fa";
 import FormatPrice from "../../../Helpers/FormatPrice";
 import { SearchBar, Container, Button } from './styles';

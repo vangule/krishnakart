@@ -1,4 +1,4 @@
-import { useCartContext } from "../../context/cartContext";
+import { useCartContext } from "../../context/cart_context";
 import CartItem from "./CartItem";
 import { NavLink } from "react-router-dom";
 import FormatPrice from "../../Helpers/FormatPrice";

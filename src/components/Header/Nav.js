@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { CgMenu, CgClose } from "react-icons/cg";
-import { useCartContext } from "../../context/cartContext";
+import { useCartContext } from "../../context/cart_context";
 import { NavContainer } from './styles';
 
 const Nav = () => {
