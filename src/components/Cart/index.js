@@ -2,7 +2,8 @@ import { useCartContext } from "../../context/cart_context";
 import CartItem from "./CartItem";
 import { NavLink } from "react-router-dom";
 import FormatPrice from "../../Helpers/FormatPrice";
-import { EmptyDiv, Wrapper, Button, ContinueBtn, Label } from "./styles";
+import Button from '../common/Button';
+import { EmptyDiv, Wrapper, ContinueBtn, Label } from "./styles";
 
 const Cart = () => {
   const { cart, clearCart, total_price, shipping_fee } = useCartContext();
@@ -37,11 +38,9 @@ const Cart = () => {
         <hr />
         <div className="cart-two-button">
           <NavLink to="/products">
-            <Button> continue Shopping </Button>
+            <Button text="continue Shopping" />
           </NavLink>
-          <Button className="btn btn-clear" onClick={clearCart}>
-            clear cart
-          </Button>
+          <Button text="clear cart" bg=" #e74c3c" onClick={clearCart} />
         </div>
 
         <div className="order-total--amount">

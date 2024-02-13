@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
-import { Container, Button } from "./styles";
 import { useEffect } from "react";
+import Button from '../common/Button';
+import { Container } from "./styles";
 
 const PageNotFound = ({ pageNotFound = false, setPageNotFound = () => {} }) => {
   useEffect(() => {
@@ -21,7 +22,7 @@ const PageNotFound = ({ pageNotFound = false, setPageNotFound = () => {} }) => {
           </p>
 
           <NavLink to="/">
-            <Button onClick={() => setPageNotFound(false)}>Go Back to Home</Button>
+            <Button text="go back to home" onClick={() => setPageNotFound(false)} />
           </NavLink>
         </div>
       </div>
