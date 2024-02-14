@@ -1,4 +1,5 @@
 import { Wrapper } from "./styles";
+import Button from '../common/Button';
 
 const Contact = () => {
   return (
@@ -13,27 +14,26 @@ const Contact = () => {
         allowFullScreen=""
         loading="lazy"
         title="fr"
-        referrerPolicy="no-referrer-when-downgrade"></iframe>
+        referrerPolicy="no-referrer-when-downgrade">
+        </iframe>
 
       <div className="container">
         <div className="contact-form">
           <form
-            action="https://formspree.io/f/xeqdgwnq"
+            action="https://formspree.io/f/xnqeddwy"
             method="POST"
             className="contact-inputs">
             <input
               type="text"
-              placeholder="username"
+              placeholder="Username"
               name="username"
               required
-              autoComplete="off"
             />
 
             <input
               type="email"
               name="Email"
               placeholder="Email"
-              autoComplete="off"
               required
             />
 
@@ -43,9 +43,10 @@ const Contact = () => {
               rows="10"
               required
               autoComplete="off"
-              placeholder="Enter you message"></textarea>
+              style={{ resize: 'none' }}
+              placeholder="Enter you message" />
 
-            <input type="submit" value="send" />
+            <Button text="Submit" />
           </form>
         </div>
       </div>

@@ -131,7 +131,7 @@ const FilterSection = () => {
       </div>
 
       <div className="filter-clear">
-        <Button text="clear filters" onClick={clearFilters} />
+        <Button text="clear filters" handleFun={clearFilters} />
       </div>
     </Container>
   );

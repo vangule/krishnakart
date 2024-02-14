@@ -8,10 +8,11 @@ export const EmptyDiv = styled.div`
 `;
 
 export const Label = styled.div`
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: capitalize;
   font-weight: 300;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
+  margin-top: 16px;
 `;
 
 export const Wrapper = styled.section`

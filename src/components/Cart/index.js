@@ -11,9 +11,10 @@ const Cart = () => {
   if (cart?.length === 0) {
     return (
       <EmptyDiv>
+        <img src="./images/no-results.png" alt="item not found" width={200} height={200} />
         <Label>No Item in Cart</Label>
         <NavLink to="/products">
-          <Button>continue Shopping</Button>
+          <Button text="continue Shopping" />
         </NavLink>
       </EmptyDiv>
     );
@@ -40,7 +41,7 @@ const Cart = () => {
           <NavLink to="/products">
             <Button text="continue Shopping" />
           </NavLink>
-          <Button text="clear cart" bg=" #e74c3c" onClick={clearCart} />
+          <Button text="clear cart" bg=" #e74c3c" handleFun={clearCart} />
         </div>
 
         <div className="order-total--amount">

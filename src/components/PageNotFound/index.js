@@ -22,7 +22,7 @@ const PageNotFound = ({ pageNotFound = false, setPageNotFound = () => {} }) => {
           </p>
 
           <NavLink to="/">
-            <Button text="go back to home" onClick={() => setPageNotFound(false)} />
+            <Button text="go back to home" handleFun={() => setPageNotFound(false)} />
           </NavLink>
         </div>
       </div>

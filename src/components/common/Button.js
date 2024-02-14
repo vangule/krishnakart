@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const Button = ({ text='', bg }) => {
+const Button = ({ text='', bg, size, handleFun = () => {} }) => {
   return (
-    <Btn bg={bg}>{text}</Btn>
+    <Btn bg={bg} className={`${size}`} onClick={handleFun} >{text}</Btn>
   )
 }
 
@@ -11,20 +11,22 @@ export default Button;
 
 export const Btn = styled.button`
   text-decoration: none;
-  max-width: auto;
   background-color: ${({ bg }) => bg || 'rgb(98 84 243)'};
   color: rgb(255 255 255);
   padding: 1.4rem 2.4rem;
   border: none;
   border-radius: 4px;
   text-transform: uppercase;
-  text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   border-radius: 4px;
+
+  &.lg {
+    padding: 0.8rem 1.4rem;
+  }
 
   &:hover,
   &:active {

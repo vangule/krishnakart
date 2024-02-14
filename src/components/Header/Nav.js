@@ -5,7 +5,8 @@ import { CgMenu, CgClose } from "react-icons/cg";
 import { useCartContext } from "../../context/cart_context";
 import { NAVIGATION_MAPPING } from "../../constants";
 import { NavContainer } from './styles';
-import Button from "../common/Button";
+import Popover from "../common/Popover";
+import Profile from "./Profile";
 
 const Nav = () => {
   const [menuIcon, setMenuIcon] = useState(false);
@@ -44,7 +45,15 @@ const Nav = () => {
               </li>
             )
           })}
-        <Button text="log in" />
+          <Popover popoverContent={<Profile />}>
+            <img
+              src="./images/user.png"
+              alt="profile"
+              width={38}
+              height={38}
+              style={{ cursor: 'pointer'}}
+            />
+          </Popover>
         </ul>
 
         <div className="mobile-navbar-btn">
