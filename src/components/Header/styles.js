@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const MainHeader = styled.header`
-  padding: 0 4.8rem;
-  height: 9rem;
+  padding: 0.1rem 4.8rem;
   background: #fff;
   box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.2);
   display: flex;

@@ -17,7 +17,7 @@ const Footer = () => {
         </div>
 
         <div>
-            <NavLink to="/"><Button text='get started' /></NavLink>
+            <NavLink to="/contact"><Button text='get started' /></NavLink>
         </div>
         </div>
       </section>
@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
         <div className="footer-subscribe">
           <h3>Subscribe to get important updates</h3>
-          <form action="#" style={{ display:'flex', }}>
+          <form action="https://formspree.io/f/xayrookw" method="POST" style={{ display:'flex', }}>
             <Email type="email" name="email" placeholder="YOUR E-MAIL" />
             <SubmitBtn>Subscribe</SubmitBtn>
           </form>
