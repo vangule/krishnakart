@@ -1,22 +1,26 @@
 import React from 'react'
+import { useCartContext } from "../../context/cart_context";
 import { useAuth0 } from "@auth0/auth0-react";
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Profile = () => {
     const { user, isAuthenticated, loginWithRedirect,  isLoading, logout } = useAuth0();
+  const { clearCart } = useCartContext();
+
 
     const { nickname = '', email = '' } = user || {};
 
     const firstLetter = nickname.slice(0, 1);
 
-    const handleAuth = () => {
+    const handleAuth = async() => {
         if(isLoading){
             return;
         }
 
         if(isAuthenticated) {
-            logout({ logoutParams: { returnTo: window.location.origin } })
+            await logout({ logoutParams: { returnTo: window.location.origin } })
+            clearCart();
         } else {
             loginWithRedirect()
         }
