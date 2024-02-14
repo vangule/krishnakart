@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import FormatPrice from "../../Helpers/FormatPrice";
-import Button from '../common/Button';
+import Button from '../common/Button'
 
 const ListView = ({ products }) => {
   return (

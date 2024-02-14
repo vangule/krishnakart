@@ -9,13 +9,14 @@ const Button = ({ text='', bg }) => {
 
 export default Button;
 
-const Btn = styled.button`
+export const Btn = styled.button`
   text-decoration: none;
   max-width: auto;
-  background-color: ${({bg}) => bg || 'rgb(98 84 243)'};
+  background-color: ${({ bg }) => bg || 'rgb(98 84 243)'};
   color: rgb(255 255 255);
   padding: 1.4rem 2.4rem;
   border: none;
+  border-radius: 4px;
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
