@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import FormatPrice from "../../Helpers/FormatPrice";
-import { Button } from "../../styles/Button";
+import Button from '../common/Button';
 
 const ListView = ({ products }) => {
   return (
@@ -23,7 +23,7 @@ const ListView = ({ products }) => {
                 <p>{description.slice(0, 90)}...</p>
 
                 <NavLink to={{pathname: `/singleproduct/${id}`, state: { prevPath: window.location.pathname }}} className="btn-main">
-                  <Button className="btn">Read More</Button>
+                  <Button text="read more" />
                 </NavLink>
               </div>
             </div>

@@ -1,7 +1,8 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
-import { Container, Button, Email, SubmitBtn } from './styles';
 import { SOCIALS } from '../../constants';
+import Button from '../common/Button';
+import { Container, Email, SubmitBtn } from './styles';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -16,9 +17,9 @@ const Footer = () => {
         </div>
 
         <div>
-          <Button className="btn hireme-btn">
-            <NavLink to="/">Get Started</NavLink>
-          </Button>
+            <NavLink to="/">
+              <Button text="get started" />
+            </NavLink>
         </div>
         </div>
       </section>

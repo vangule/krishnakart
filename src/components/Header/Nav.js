@@ -3,8 +3,9 @@ import { NavLink } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { CgMenu, CgClose } from "react-icons/cg";
 import { useCartContext } from "../../context/cart_context";
-import { NavContainer } from './styles';
 import { NAVIGATION_MAPPING } from "../../constants";
+import { NavContainer } from './styles';
+import Button from "../common/Button";
 
 const Nav = () => {
   const [menuIcon, setMenuIcon] = useState(false);
@@ -43,6 +44,7 @@ const Nav = () => {
               </li>
             )
           })}
+        <Button text="log in" />
         </ul>
 
         <div className="mobile-navbar-btn">

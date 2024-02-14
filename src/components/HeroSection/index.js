@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
-import { Wrapper, Button } from "./styles";
+import Button from '../common/Button';
+import { Wrapper } from "./styles";
 
 const HeroSection = ({ myData }) => {
   const { name = '', description = '', type = '', imgUrl = '' } = myData || {};
@@ -13,7 +14,7 @@ const HeroSection = ({ myData }) => {
             <h1> {name} </h1>
             <p>{description}</p>
             {type === 'home' && <NavLink to="/products">
-              <Button>show now</Button>
+              <Button text="show now" />
             </NavLink>}
           </div>
           <div className="hero-section-image">

@@ -1,9 +1,18 @@
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components';
 
-export const Button = styled.button`
+const Button = ({ text='', bg }) => {
+  return (
+    <Btn bg={bg}>{text}</Btn>
+  )
+}
+
+export default Button;
+
+const Btn = styled.button`
   text-decoration: none;
   max-width: auto;
-  background-color: rgb(98 84 243);
+  background-color: ${({bg}) => bg || 'rgb(98 84 243)'};
   color: rgb(255 255 255);
   padding: 1.4rem 2.4rem;
   border: none;
@@ -14,6 +23,7 @@ export const Button = styled.button`
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
+  border-radius: 4px;
 
   &:hover,
   &:active {

@@ -1,7 +1,8 @@
 import { useFilterContext } from "../../../context/filter_context";
 import { FaCheck } from "react-icons/fa";
 import FormatPrice from "../../../Helpers/FormatPrice";
-import { SearchBar, Container, Button } from './styles';
+import Button from '../../common/Button';
+import { SearchBar, Container } from './styles';
 
 const FilterSection = () => {
   const {
@@ -130,9 +131,7 @@ const FilterSection = () => {
       </div>
 
       <div className="filter-clear">
-        <Button className="btn" onClick={clearFilters}>
-          Clear Filters
-        </Button>
+        <Button text="Clear Filters" onClick={clearFilters} />
       </div>
     </Container>
   );

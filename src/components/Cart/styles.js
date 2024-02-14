@@ -60,7 +60,6 @@ export const Wrapper = styled.section`
     text-transform: capitalize;
   }
   .cart-image--name {
-    /* background-color: red; */
     align-items: center;
     display: grid;
     gap: 1rem;
@@ -93,10 +92,6 @@ export const Wrapper = styled.section`
     margin-top: 2rem;
     display: flex;
     justify-content: space-between;
-
-    .btn-clear {
-      background-color: #e74c3c;
-    }
   }
 
   .amount-toggle {
@@ -186,56 +181,5 @@ export const Wrapper = styled.section`
         padding: 3.2rem;
       }
     }
-  }
-`;
-
-export const Button = styled.button`
-  text-decoration: none;
-  max-width: auto;
-  background-color: rgb(98 84 243);
-  color: rgb(255 255 255);
-  padding: 1.4rem 2.4rem;
-  border: none;
-  text-transform: uppercase;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-
-  &:hover,
-  &:active {
-    box-shadow: 0 2rem 2rem 0 rgb(132 144 255 / 30%);
-    box-shadow: ${({ theme }) => theme.colors.shadowSupport};
-    transform: scale(0.96);
-  }
-
-  a {
-    text-decoration: none;
-    color: rgb(255 255 255);
-    font-size: 1.8rem;
-  }
-`;
-
-export const ContinueBtn = styled.button`
-  text-decoration: none;
-  max-width: auto;
-  background-color: #fff;
-  color: rgb(98 84 243);
-  padding: 1.4rem 2.4rem;
-  border: 1px solid rgb(98 84 243);
-  text-transform: uppercase;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-
-  &:hover,
-  &:active {
-    box-shadow: ${({ theme }) => theme.colors.shadowSupport};
-    transform: scale(0.96);
-    background: rgb(98 84 243);
-    color: #fff;
-    border: none;
   }
 `;

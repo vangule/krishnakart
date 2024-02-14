@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import CartAmountToggle from "../../Cart/CartAmountToggle";
 import { NavLink } from "react-router-dom";
-import { Button } from "../../../styles/Button";
+import Button from '../../common/Button';
 import { useCartContext } from "../../../context/cart_context";
 import { Container } from './styles';
 
@@ -49,7 +49,7 @@ const AddToCart = ({ product = {} }) => {
       />
 
       <NavLink to="/cart" onClick={() => addToCart(id, color, amount, product)}>
-        <Button className="btn">Add To Cart</Button>
+        <Button text="add to cart"></Button>
       </NavLink>
     </Container>
   );
